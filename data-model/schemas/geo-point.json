@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://e-municipal.com/schemas/geographical-location.schema.json",
+    "$id": "https://e-municipal.com/schemas/geo-point.json",
     "title": "Geo-point",
     "description": "Geo-point object containing geographical coordinates",
     "required": [ "latitude", "longitude" ],
