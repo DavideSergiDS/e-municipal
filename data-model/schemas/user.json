@@ -1,12 +1,15 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "https://e-municipal.com/data-model/user.json",
+    "$id": "https://e-municipal.com/schemas/user.json",
     "type": "object",
     "title": "E-municipal user",
     "description": "E-municipal user model",
     "default": {},
     "required": [
         "username",
+        "email",
+        "birthday",
+        "gender",
         "account_creation",
         "last_activity",
         "municipal_area_ref",
@@ -21,11 +24,30 @@
             "title": "Username",
             "description": "Username for the user"
         },
+        "email": {
+            "$id": "#/properties/email",
+            "type": "string",
+            "title": "E-mail",
+            "description": "User e-mail"
+        },
         "account_creation": {
             "$id": "#/properties/account_creation",
             "type": "date-time",
             "title": "Account creation date",
             "description": "Acconut creation date"
+        },
+        "birthday": {
+            "$id": "#/properties/birthday",
+            "type": "date-time",
+            "title": "Birthday date",
+            "description": "Birthday date"
+        },
+        "gender": {
+            "$id": "#/properties/gender",
+            "type": "string",
+            "enum": [ "female", "male" ],
+            "title": "Gender",
+            "description": "Gender"
         },
         "last_activity": {
             "$id": "#/properties/last_activity",
@@ -42,8 +64,8 @@
         "issues_count": {
             "$id": "#/properties/issues_count",
             "type": "number",
-            "title": "User issues count",
-            "description": "User opened issues count"
+            "title": "User issues number",
+            "description": "Number of issues opened by the user"
         },   
         "preferred_topic_refs": {
             "$id": "#/properties/preferresd_topic_refs",
