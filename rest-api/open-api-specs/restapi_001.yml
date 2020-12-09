@@ -1,0 +1,64 @@
+openapi: '3.0.2'
+info:
+  title: E-Municipal API
+  version: '0.0.1'
+servers:
+  - url: https://e-municipal.com/api/v0.0.1
+paths:
+  /users/{user}:
+    parameters:
+      - in: path
+        name: user
+        schema:
+          type: string
+        required: true
+        description: User identifier
+    get:
+      description: Get user profile
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '../../data-model/schemas/user'
+  /issues:
+    get:
+      description: Get user issues
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:  
+                  $ref: '../../data-model/schemas/issue'
+    post:
+      requestBody:
+        description: Create an user issue
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '../../data-model/schemas/issue'
+      responses:
+        '201':
+          description: Created
+  /issues/{issue}:
+    parameters:
+      - in: path
+        name: issue
+        schema:
+          type: string
+        required: true
+        description: Issue identifier
+    get:
+      description: Get user issue
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '../../data-model/schemas/issue'
