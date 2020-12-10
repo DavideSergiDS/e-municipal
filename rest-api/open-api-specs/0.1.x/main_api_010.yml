@@ -1,9 +1,9 @@
 openapi: '3.0.2'
 info:
   title: E-Municipal API
-  version: '0.0.1'
+  version: '0.1.0'
 servers:
-  - url: https://e-municipal.com/api/v0.0.1
+  - url: https://e-municipal.com/api/v0.1
 paths:
   /users/{user}:
     parameters:
@@ -22,9 +22,9 @@ paths:
             application/json:
               schema:
                 $ref: '../../data-model/schemas/user'
-  /issues:
+  /events:
+    description: Get user events
     get:
-      description: Get user issues
       responses:
         '200':
           description: OK
@@ -33,32 +33,43 @@ paths:
               schema:
                 type: array
                 items:  
-                  $ref: '../../data-model/schemas/issue'
+                  $ref: '../../data-model/schemas/event'
     post:
+      description: Create an user event
       requestBody:
-        description: Create an user issue
         required: true
         content:
           application/json:
             schema:
-              $ref: '../../data-model/schemas/issue'
+              $ref: '../../data-model/schemas/event'
       responses:
         '201':
           description: Created
-  /issues/{issue}:
+  /events/{event}:
     parameters:
       - in: path
-        name: issue
+        name: event
         schema:
           type: string
         required: true
-        description: Issue identifier
+        description: event identifier
     get:
-      description: Get user issue
+      description: Get user event
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '../../data-model/schemas/issue'
+                $ref: '../../data-model/schemas/event'
+    put:
+      description: Update existing event metadata
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '../../data-model/schemas/event'
+      responses:
+        '200':
+          description: Updated
