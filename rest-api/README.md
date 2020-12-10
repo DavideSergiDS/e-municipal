@@ -2,7 +2,7 @@
 
 ## Service versioning
 REST API service versioning follows well defined rules and conventions:
-- Each versioning is composed by three digits : *x.y.z*
+- Each version is composed by three digits : *x.y.z*
   - **X** : main service version. <br>
     It identifies a set of features implemented by service. When features change, main version will change.
   - **Y** : intermediate service version. <br>
