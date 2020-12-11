@@ -21,7 +21,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '../../data-model/schemas/user'
+                $ref: '/data-model/schemas/user'
   /events:
     description: Get user events
     get:
@@ -33,7 +33,7 @@ paths:
               schema:
                 type: array
                 items:  
-                  $ref: '../../data-model/schemas/event'
+                  $ref: '/data-model/schemas/event'
     post:
       description: Create an user event
       requestBody:
@@ -41,7 +41,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '../../data-model/schemas/event'
+              $ref: '/data-model/schemas/event'
       responses:
         '201':
           description: Created
@@ -61,7 +61,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '../../data-model/schemas/event'
+                $ref: '/data-model/schemas/event'
     put:
       description: Update existing event metadata
       requestBody:
@@ -69,7 +69,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '../../data-model/schemas/event'
+              $ref: '/data-model/schemas/event'
       responses:
         '200':
           description: Updated
