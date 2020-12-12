@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://e-municipal.com/schemas/attachment.json",
+    "type": "object",
+    "title": "E-municipal attachment",
+    "description": "E-municipal attachment model",
+    "default": {},
+    "required": [
+        "id",
+        "name",
+        "creation_date"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "id": {
+            "$id": "#/properties/id",
+            "type": "string",
+            "title": "Attachment unique-identifier",
+            "description": "Attachment unique-identifie"
+        },
+        "name": {
+            "$id": "#/properties/name",
+            "type": "string",
+            "title": "Attachment name",
+            "description": "Attachment name"
+        },
+        "creation_date": {
+            "$id": "#/properties/creation_date",
+            "type": "data-time",
+            "title": "Attachment creation date",
+            "description": "Attachment creation date"
+        }
+    }
+}

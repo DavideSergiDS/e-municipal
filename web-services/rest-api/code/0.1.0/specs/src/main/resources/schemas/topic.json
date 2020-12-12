@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://e-municipal.com/schemas/topic.json",
+    "type": "object",
+    "title": "E-municipal topic",
+    "description": "E-municipal topic model",
+    "default": {},
+    "required": [
+        "name",
+        "description"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "name": {
+            "$id": "#/properties/name",
+            "type": "string",
+            "title": "Topic name",
+            "description": "Topic name"
+        },
+        "description": {
+            "$id": "#/properties/description",
+            "type": "string",
+            "title": "Topic description",
+            "description": "Topic description"
+        }
+    }
+}
