@@ -22,8 +22,8 @@ paths:
             application/json:
               schema:
                 $ref: '/data-model/schemas/user'
-  /events:
-    description: Get user events
+  /issues:
+    description: Get user issues
     get:
       responses:
         '200':
@@ -33,43 +33,43 @@ paths:
               schema:
                 type: array
                 items:  
-                  $ref: '/data-model/schemas/event'
+                  $ref: '/data-model/schemas/issue'
     post:
-      description: Create an user event
+      description: Create an user issue
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '/data-model/schemas/event'
+              $ref: '/data-model/schemas/issue'
       responses:
         '201':
           description: Created
-  /events/{event}:
+  /issues/{issue}:
     parameters:
       - in: path
-        name: event
+        name: issue
         schema:
           type: string
         required: true
-        description: event identifier
+        description: issue identifier
     get:
-      description: Get user event
+      description: Get user issue
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '/data-model/schemas/event'
+                $ref: '/data-model/schemas/issue'
     put:
-      description: Update existing event metadata
+      description: Update existing issue metadata
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '/data-model/schemas/event'
+              $ref: '/data-model/schemas/issue'
       responses:
         '200':
           description: Updated

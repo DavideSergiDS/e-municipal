@@ -1,0 +1,75 @@
+openapi: '3.0.2'
+info:
+  title: E-Municipal API
+  version: '0.1.0'
+servers:
+  - url: https://e-municipal.com/api/v0.1
+paths:
+  /users/{user}:
+    parameters:
+      - in: path
+        name: user
+        schema:
+          type: string
+        required: true
+        description: User identifier
+    get:
+      description: Get user profile
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: './schemas/user'
+  /issues:
+    description: Get user issues
+    get:
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:  
+                  $ref: './schemas/issue'
+    post:
+      description: Create an user issue
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: './schemas/issue'
+      responses:
+        '201':
+          description: Created
+  /issues/{issue}:
+    parameters:
+      - in: path
+        name: issue
+        schema:
+          type: string
+        required: true
+        description: issue identifier
+    get:
+      description: Get user issue
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: './schemas/issue'
+    put:
+      description: Update existing issue metadata
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: './schemas/issue'
+      responses:
+        '200':
+          description: Updated
