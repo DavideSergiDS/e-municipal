@@ -33,6 +33,7 @@
 
 	<build>
 		<plugins>
+			<!-- Plugin in charge of creating executable JAR file (application has main entrypoint)-->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
