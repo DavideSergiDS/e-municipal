@@ -13,9 +13,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>specs</module>
         <module>app</module>
-        <module>specification</module>
     </modules>
-
-
 </project>

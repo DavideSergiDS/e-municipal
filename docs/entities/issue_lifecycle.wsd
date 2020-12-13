@@ -1,0 +1,34 @@
+@startuml
+title Issue lifecycle
+
+CitizenUser->BE : Create issue
+BE->Issue: <font color=green><b>CREATED</b></font>
+
+AuthorityUser -> BE: Get issue
+
+alt  Issue rejecting case
+AuthorityUser -> BE: Reject issue
+BE->Issue: set state = <font color=green><b>REJECTED</b></font>
+
+else Issue approving case
+
+AuthorityUser -> BE: Accept issue
+BE->Issue: set state = <font color=green><b>ACCEPTED</b></font>
+
+AuthorityUser -> BE: Issue taken in charge
+BE->Issue: set state = <font color=green><b>ON GOING</b></font>
+
+group optional
+AuthorityUser -> BE: Freeze issue
+BE->Issue: set state = <font color=green><b>IDLE</b></font>
+
+AuthorityUser -> BE: Re-start issue
+BE->Issue: set state = <font color=green><b>ON GOING</b></font>
+end
+
+AuthorityUser -> BE: Close issue
+BE->Issue: set state = <font color=green><b>CLOSED</b></font>
+
+end
+
+@enduml

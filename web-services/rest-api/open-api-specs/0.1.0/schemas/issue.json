@@ -79,7 +79,7 @@
         "state": {
             "$id": "#/properties/state",
             "type": "string",
-            "enum": [ "created", "submitted", "in_process", "idle", "closed"],
+            "enum": [ "created", "accepted", "in_process", "idle", "closed"],
             "title": "Issue state",
             "description": "Current state assumed by the issue"
         }
