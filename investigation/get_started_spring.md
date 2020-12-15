@@ -1,10 +1,10 @@
 # Spring
-- Spring Boot (more [info](https://spring.io/guides/gs/spring-boot/)
+- Spring Boot (more)[info](https://spring.io/guides/gs/spring-boot/)
 - Spring framework
-  - [Introduction] (https://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/html/overview.html))
-  - [IoC Container] (https://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/html/beans.html)
+  - [Introduction](https://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/html/overview.html)
+  - [IoC Container](https://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/html/beans.html)
 
-Overview diagram of Spring framework core concepts:
+Overview diagram of Spring framework core concepts: <br>
 ![spring framework](https://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/html/images/spring-overview.png)
 
 ## Dependency management
