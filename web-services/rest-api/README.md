@@ -17,7 +17,7 @@ REST API service versioning follows well defined rules and conventions:
 Rest API service is implemented by using [Spring Boot](https://spring.io/projects/spring-boot#overview) framework. 
 Next step will be to implement HATEOAS paradigm, by using [Spring HATEOAS](https://spring.io/projects/spring-hateoas).
 
-Goal is to develop REST API by following the API-first approach. This means that controller skeletons are automatically created starting from Open API specs using OpenAPI Maven plugin (more [info](https://reflectoring.io/spring-boot-openapi/)).
+Goal is to develop REST API by following the API-first approach. This means that controller skeletons are automatically created starting from Open API specs using Maven [openapi-generator-maven-plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin) (more [info-1](https://reflectoring.io/spring-boot-openapi/) [info-2](https://binarymindset.com/api-first-development-with-springboot-and-openapi/)).
 
 Spring Boot application is structured as a multi-module application (more [info](https://spring.io/guides/gs/multi-module/)):
 - specs module, implementing OpenAPI Maven plugin<br>
