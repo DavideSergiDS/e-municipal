@@ -39,13 +39,13 @@
         },
         "creation_date": {
             "$id": "#/properties/creation_date",
-            "type": "data-time",
+            "type": "string",
             "title": "Issue creation date",
             "description": "Issue creation date"
         },
         "last_update_date": {
             "$id": "#/properties/last_update_date",
-            "type": "data-time",
+            "type": "string",
             "title": "Issue last update date",
             "description": "Issue last update date"
         },

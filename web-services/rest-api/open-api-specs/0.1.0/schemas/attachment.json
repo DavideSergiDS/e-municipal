@@ -26,7 +26,7 @@
         },
         "creation_date": {
             "$id": "#/properties/creation_date",
-            "type": "data-time",
+            "type": "string",
             "title": "Attachment creation date",
             "description": "Attachment creation date"
         }

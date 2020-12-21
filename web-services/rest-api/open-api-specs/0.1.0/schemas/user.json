@@ -32,13 +32,13 @@
         },
         "account_creation": {
             "$id": "#/properties/account_creation",
-            "type": "date-time",
+            "type": "string",
             "title": "Account creation date",
             "description": "Acconut creation date"
         },
         "birthday": {
             "$id": "#/properties/birthday",
-            "type": "date-time",
+            "type": "string",
             "title": "Birthday date",
             "description": "Birthday date"
         },
@@ -51,7 +51,7 @@
         },
         "last_activity": {
             "$id": "#/properties/last_activity",
-            "type": "date-time",
+            "type": "string",
             "title": "Last activity date",
             "description": "Last activity date"
         },

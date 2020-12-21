@@ -21,7 +21,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'schemas/user.json'
+                $ref: '#/components/schemas/User'
   /issues:
     description: Get user issues
     get:
@@ -33,7 +33,7 @@ paths:
               schema:
                 type: array
                 items:  
-                  $ref: 'schemas/issue.json'
+                  $ref: '#/components/schemas/Issue'
     post:
       description: Create an user issue
       requestBody:
@@ -41,7 +41,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'schemas/issue.json'
+              $ref: '#/components/schemas/Issue'
       responses:
         '201':
           description: Created
@@ -61,7 +61,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'schemas/issue.json'
+                $ref: '#/components/schemas/Issue'
     put:
       description: Update existing issue metadata
       requestBody:
@@ -69,7 +69,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'schemas/issue.json'
+              $ref: '#/components/schemas/Issue'
       responses:
         '200':
           description: Updated
+
+components:
+  schemas:
+    User:
+      $ref: 'schemas/user.json'
+    Issue:
+      $ref: 'schemas/issue.json'

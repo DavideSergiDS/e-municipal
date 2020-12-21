@@ -1,0 +1,16 @@
+{
+  "name": "openapi-integrator",
+  "version": "1.0.0",
+  "description": "Node application which embed json schema files within related openapi specs file ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "davide sergi",
+  "license": "ISC",
+  "dependencies": {
+    "@openapi-contrib/json-schema-to-openapi-schema": "^1.2.0",
+    "indent-string": "^4.0.0",
+    "js-yaml": "^3.14.1"
+  }
+}
