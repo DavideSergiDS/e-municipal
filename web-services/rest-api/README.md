@@ -26,7 +26,7 @@ Spring Boot application is structured as a multi-module application (more [info]
 Open API specs file placed within `./code/{x.y.z}/specs/src/main/resources/main_api.yml` is a copy of file placed within `../open-api-specs/{x.y.z}/main_api_integrated.yml`. <br>
 :warning: **Note**: when specs file is updated, should be copied into spring app folder and then re-aligned with new changes *[TODO: explain more in details]* 
 
-### OpenAPI Integrator
+## OpenAPI Integrator
 OpenAPI integrator is a Node script ables to integrate an OpenAPI specs yaml file referrencing separated JSON schema files (as component data model) in single YAML file embedding data specifications.
 
 It accepts version of OpenAPI specs as input and produce integrated YAML file as output.
