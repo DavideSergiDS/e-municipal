@@ -1,0 +1,63 @@
+const fs = require("fs");
+const path = require("path");
+const process = require("process")
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+const database = 'emunicipal';
+const issues_collection = 'issues';
+const comments_collection = 'comments';
+const municipal_areas_collection = 'municipal_area';
+const attachments_collection = 'attachments';
+
+const issue_schema = JSON.parse(fs.readFileSync(path.join(process.cwd(), "schemas", "issue.json")));
+const comment_schema = JSON.parse(fs.readFileSync(path.join(process.cwd(), "schemas", "comment.json")));
+const municipal_area_schema = JSON.parse(fs.readFileSync(path.join(process.cwd(), "schemas", "municipal_area.json")));
+// The current database to use.
+use(database);
+
+// Create a new collection.
+const collections = db.getCollectionNames();
+
+if(!collections.find(c => issues_collection === c))
+    db.createCollection(issues_collection, {validator: issue_schema});
+
+if(!collections.find(c => comments_collection === c))
+    db.createCollection(comments_collection, {validator: comment_schema});
+
+if(!collections.find(c => municipal_areas_collection === c))
+    db.createCollection(municipal_areas_collection, {validator: municipal_area_schema});
+
+if(!collections.find(c => attachments_collection === c))
+    db.createCollection(attachments_collection);
+
+// The prototype form to create a regular collection:
+/* db.createCollection( <name>,
+  {
+    capped: <boolean>,
+    autoIndexId: <boolean>,
+    size: <number>,
+    max: <number>,
+    storageEngine: <document>,
+    validator: <document>,
+    validationLevel: <string>,
+    validationAction: <string>,
+    indexOptionDefaults: <document>,
+    viewOn: <string>,
+    pipeline: <pipeline>,
+    collation: <document>,
+    writeConcern: <document>
+  }
+) */
+
+// The prototype form to create a time-series collection:
+/* db.createCollection( <name>,
+  {
+    timeseries: {
+      timeField: <string>,
+      metaField: <string>,
+      granularity: <string>
+    },
+    expireAfterSeconds: <number>
+  }
+) */

@@ -1,0 +1,44 @@
+{
+    "type": "object",
+    "title": "E-municipal issue",
+    "description": "E-municipal issue model",
+    "default": {},
+    "required": [
+        "content",
+        "creation_date",
+        "attachment_refs",
+        "last_update_date",
+        "author_ref"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "content": {
+            "type": "string",
+            "title": "Issue content",
+            "description": "Issue content"
+        },
+        "creation_date": {
+            "type": "string",
+            "title": "Issue creation date",
+            "description": "Issue creation date (ISO 8601 format)"
+        },
+        "last_update_date": {
+            "type": "string",
+            "title": "Issue last update date",
+            "description": "Issue last update date (ISO 8601 format)"
+        },
+        "attachment_refs": {
+            "type": "array",
+            "title": "Issue attachments",
+            "description": "Issue media attachments",
+            "items": {
+                "type": "string"
+            }
+        },
+        "author_ref": {
+            "type": "string",
+            "title": "Issue author",
+            "description": "Issue user author reference"
+        }
+    }
+}

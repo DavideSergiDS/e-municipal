@@ -1,0 +1,63 @@
+{
+    "type": "object",
+    "title": "E-municipal topic",
+    "description": "E-municipal area model",
+    "default": {},
+    "required": [
+        "name",
+        "city",
+        "province",
+        "region",
+        "state",
+        "perimeter"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "name": {
+            "type": "string",
+            "title": "Municipal area name",
+            "description": "Municipal area name"
+        },
+        "city": {
+            "type": "string",
+            "title": "Belonging city",
+            "description": "Belonging city"
+        },
+        "province": {
+            "type": "string",
+            "title": "Belonging province",
+            "description": "Belonging province"
+        },
+        "region": {
+            "type": "string",
+            "title": "Belonging region",
+            "description": "Belonging region"
+        },
+        "state": {
+            "type": "string",
+            "title": "Belonging state",
+            "description": "Belonging state"
+        },
+        "perimeter": {
+            "title": "Area geo-perimeter",
+            "type": "array",
+            "description": "Geo-point array defining area perimeter",
+            "items": {
+                "required": [ "latitude", "longitude" ],
+                "type": "object",
+                "properties": {
+                  "latitude": {
+                    "type": "number",
+                    "minimum": -90,
+                    "maximum": 90
+                  },
+                  "longitude": {
+                    "type": "number",
+                    "minimum": -180,
+                    "maximum": 180
+                  }
+                }
+            }
+        }
+    }
+}

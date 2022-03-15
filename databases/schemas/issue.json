@@ -1,0 +1,80 @@
+{
+    "type": "object",
+    "title": "E-municipal issue",
+    "description": "E-municipal issue model",
+    "default": {},
+    "required": [
+        "title",
+        "description",
+        "creation_date",
+        "attachment_refs",
+        "last_update_date",
+        "author_ref",
+        "municipal_area_ref",
+        "topic_refs",
+        "state"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "title": {
+            "type": "string",
+            "title": "Issue title",
+            "description": "Issue title"
+        },
+        "description": {
+            "type": "string",
+            "title": "Issue description",
+            "description": "Issue description"
+        },
+        "creation_date": {
+            "type": "string",
+            "title": "Issue creation date",
+            "description": "Issue creation date (ISO 8601 format)"
+        },
+        "last_update_date": {
+            "type": "string",
+            "title": "Issue last update date",
+            "description": "Issue last update date (ISO 8601 format)"
+        },
+        "attachment_refs": {
+            "type": "array",
+            "title": "Issue attachments",
+            "description": "Issue media attachments",
+            "items": {
+                "type": "string"
+            }
+        },
+        "author_ref": {
+            "type": "string",
+            "title": "Issue author",
+            "description": "Issue user author reference"
+        },
+        "municipal_area_ref": {
+            "type": "string",
+            "title": "Municipal area related to the issue",
+            "description": "Issue municipal area reference"
+        },
+        "topic_refs": {
+            "type": "array",
+            "title": "Issue topics",
+            "description": "Context topics referred by the issue",
+            "items": {
+                "type": "string"
+            }
+        },
+        "comments_refs": {
+            "type": "array",
+            "title": "Issue comments",
+            "description": "Comments following the issue",
+            "items": {
+                "type": "string"
+            }
+        },
+        "state": {
+            "type": "string",
+            "enum": [ "created", "accepted", "in_process", "idle", "closed"],
+            "title": "Issue state",
+            "description": "Current state assumed by the issue"
+        }
+    }
+}
