@@ -1,0 +1,36 @@
+Schema:
+    User {
+        user_id
+        username
+        ... other stuff
+
+        issues: [Issue]
+    }
+
+    Issue {
+        issue_id
+        title
+        description
+        ... other stuff
+        
+        municipal_aread: MunicipalArea
+        user: User
+        attachments: [Attchment]
+
+    }
+
+Query:
+
+
+
+List of query:
+- get area issues
+- get near issues
+- get user area issues
+    {
+        user
+        total_user_issues
+    }
+- get user near issues
+
+
